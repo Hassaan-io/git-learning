@@ -12,7 +12,7 @@ class Cat(Animal):
         print("Meow")
 dog = Dog("Max","6")
 cat = Cat("Luna", "2")
-dog.introduce()
-dog.speak()
-cat.introduce()
-cat.speak()
+animals = [dog,cat]
+for animal in animals:
+    animal.introduce()
+    animal.speak()
