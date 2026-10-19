@@ -1,12 +1,12 @@
 class Character:
     def __init__(self, name, health):
         self.name = name
-        self._health = health
+        self._health = int(health)
     def introduce(self):
         print(f"Hi I am {self.name}, and my health is {self._health}")
     def takedamage(self, amount):
-        if int(self._health) - int(amount) >= 0:
-            int(self._health) -= int(amount)
+        if self._health - int(amount) >= 0:
+            self._health -= int(amount)
         else:
             print("Negative health error")
 class Warrior(Character):
@@ -21,5 +21,5 @@ Characters = [Warr1, Mage1]
 for char in Characters:
     char.introduce()
     char.special_attack()
-Mage1.takedamage("30")
-Mage1.introduce()
+Warr1.takedamage("30")
+Warr1.introduce()
